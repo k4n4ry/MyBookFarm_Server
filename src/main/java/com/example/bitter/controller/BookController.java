@@ -17,7 +17,7 @@ public class BookController {
     @PostMapping("/book")
     public ResponseEntity<HttpStatus> registBook(@RequestBody RegistBookRequest request) {
 
-        bookService.regist(request.getAddress(), request.getIsbn());
+        bookService.regist(request.getUid(), request.getIsbn());
         return new ResponseEntity<>(HttpStatus.OK);
 
     }

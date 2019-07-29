@@ -9,8 +9,8 @@ import org.springframework.stereotype.Repository;
 @Mapper
 public interface RBookUserRepository {
 
-    @Insert("INSERT INTO r_bookuser VALUES(#{address}, #{isbn}, \'0\')")
-    public void insert(@Param("address") String address, @Param("isbn") String isbn);
+    @Insert("INSERT INTO r_bookuser VALUES(#{uid}, #{isbn}, \'0\')")
+    public void insert(@Param("uid") String uid, @Param("isbn") String isbn);
 
 
 }

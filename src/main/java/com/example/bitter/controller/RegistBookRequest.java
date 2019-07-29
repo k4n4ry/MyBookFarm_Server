@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 public class RegistBookRequest {
 
-    private String address;
+    private String uid;
 
     private String isbn;
 }

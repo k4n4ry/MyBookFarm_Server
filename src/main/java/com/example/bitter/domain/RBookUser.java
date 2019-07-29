@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 public class RBookUser {
 
-    private String address;
+    private String uid;
     private String isbn;
     private String status;
 
