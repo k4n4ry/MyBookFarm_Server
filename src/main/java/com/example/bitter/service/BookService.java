@@ -1,8 +1,11 @@
 package com.example.bitter.service;
 
+import com.example.bitter.domain.RBookUser;
 import com.example.bitter.domain.RBookUserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -13,6 +16,10 @@ public class BookService {
     public void regist(String uid, String isbn) {
         rBookUserRepository.insert(uid, isbn);
 
+    }
+
+    public List<RBookUser> getIsbnList(String uid) {
+        return rBookUserRepository.getBookList(uid);
     }
 
 }
