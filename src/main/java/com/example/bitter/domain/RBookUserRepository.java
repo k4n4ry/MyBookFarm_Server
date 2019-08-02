@@ -12,7 +12,7 @@ import java.util.List;
 @Mapper
 public interface RBookUserRepository {
 
-    @Insert("INSERT INTO r_bookuser VALUES(#{uid}, #{isbn}, \'0\')")
+    @Insert("INSERT INTO r_bookuser VALUES(#{uid}, #{isbn}, \'0\', 0)")
     public void insert(@Param("uid") String uid, @Param("isbn") String isbn);
 
     @Select("SELECT * FROM r_bookuser WHERE uid = #{uid}")

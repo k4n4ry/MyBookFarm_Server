@@ -22,5 +22,6 @@ CREATE TABLE `springboot-flyway`.`r_bookuser` (
   `uid` VARCHAR(256) NOT NULL,
   `isbn` VARCHAR(16) NOT NULL,
   `status` VARCHAR(1),
+  `progress` int,
   PRIMARY KEY (`uid`,`isbn`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
