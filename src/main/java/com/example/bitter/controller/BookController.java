@@ -22,15 +22,27 @@ public class BookController {
                 .rBookUserList(rBookUserList)
                 .build();
         return new ResponseEntity<>(bookResponse, HttpStatus.OK);
+    }
 
+    @GetMapping("/book/{uid}/{isbn}")
+    public ResponseEntity<BookResponse> getUserBookIsbn(@PathVariable String uid, @PathVariable String isbn) {
+        List<RBookUser> rBookUserList =  bookService.getIsbnList(uid, isbn);
+        BookResponse bookResponse = BookResponse.builder()
+                .rBookUserList(rBookUserList)
+                .build();
+        return new ResponseEntity<>(bookResponse, HttpStatus.OK);
     }
 
     @PostMapping("/book")
     public ResponseEntity<HttpStatus> registBook(@RequestBody RegistBookRequest request) {
-
         bookService.regist(request.getUid(), request.getIsbn());
         return new ResponseEntity<>(HttpStatus.OK);
+    }
 
+    @PutMapping("/book")
+    public ResponseEntity<HttpStatus> putUserBookIsbn(@RequestBody RegistBookRequest request) {
+        bookService.update(request.getUid(), request.getIsbn(), request.getProgress());
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
 }

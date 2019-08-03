@@ -22,4 +22,11 @@ public class BookService {
         return rBookUserRepository.getBookList(uid);
     }
 
+    public List<RBookUser> getIsbnList(String uid, String isbn) {
+        return rBookUserRepository.getBookListIsbn(uid, isbn);
+    }
+
+    public void update(String uid, String isbn, int progress) {
+        rBookUserRepository.update(uid, isbn, progress);
+    }
 }

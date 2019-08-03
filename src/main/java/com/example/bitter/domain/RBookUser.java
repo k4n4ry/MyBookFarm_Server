@@ -10,6 +10,6 @@ public class RBookUser {
     private String uid;
     private String isbn;
     private String status;
-    private String progress;
+    private int progress;
 
 }

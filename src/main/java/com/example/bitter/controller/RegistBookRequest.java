@@ -10,4 +10,6 @@ public class RegistBookRequest {
     private String uid;
 
     private String isbn;
+
+    private int progress;
 }
