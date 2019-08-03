@@ -5,12 +5,12 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class RegistBookRequest {
+public class RegistUserRequest {
 
     private String uid;
 
-    private String isbn;
+    private String uname;
 
-    private int progress;
+    private String description;
 
 }

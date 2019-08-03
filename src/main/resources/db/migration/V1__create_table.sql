@@ -18,10 +18,24 @@ CREATE TABLE `currency` (
 --  PRIMARY KEY (`id`)
 --) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+CREATE TABLE `springboot-flyway`.`m_user` (
+  `uid` VARCHAR(256) NOT NULL,
+  `uname` VARCHAR(256),
+  `description` VARCHAR(2000),
+  PRIMARY KEY (`uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
 CREATE TABLE `springboot-flyway`.`r_bookuser` (
   `uid` VARCHAR(256) NOT NULL,
   `isbn` VARCHAR(16) NOT NULL,
   `status` VARCHAR(1),
   `progress` int,
-  PRIMARY KEY (`uid`,`isbn`)
+  `memo` VARCHAR(2000),
+  PRIMARY KEY (`uid`,`isbn`),
+  CONSTRAINT fk_uid
+  FOREIGN KEY (uid)
+  REFERENCES `springboot-flyway`.`m_user` (uid)
+  ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
