@@ -13,4 +13,6 @@ public class RegistBookRequest {
 
     private int progress;
 
+    private String memo;
+
 }

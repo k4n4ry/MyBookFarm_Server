@@ -18,7 +18,7 @@ public interface RBookUserRepository {
     @Select("SELECT * FROM r_bookuser WHERE uid = #{uid} AND isbn = #{isbn}")
     public List<RBookUser> getBookListIsbn(@Param("uid") String uid, @Param("isbn") String isbn);
 
-    @Update("UPDATE r_bookuser set progress = #{progress} WHERE uid = #{uid} AND isbn = #{isbn}")
-    public void update(@Param("uid") String uid, @Param("isbn") String isbn, @Param("progress") int progress);
+    @Update("UPDATE r_bookuser set progress = #{progress}, memo = #{memo} WHERE uid = #{uid} AND isbn = #{isbn}")
+    public void update(@Param("uid") String uid, @Param("isbn") String isbn, @Param("progress") int progress, @Param("memo") String memo);
 
 }

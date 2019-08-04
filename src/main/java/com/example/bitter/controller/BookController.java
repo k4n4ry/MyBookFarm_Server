@@ -41,7 +41,7 @@ public class BookController {
 
     @PutMapping("/book")
     public ResponseEntity<HttpStatus> putUserBookIsbn(@RequestBody RegistBookRequest request) {
-        bookService.update(request.getUid(), request.getIsbn(), request.getProgress());
+        bookService.update(request.getUid(), request.getIsbn(), request.getProgress(), request.getMemo());
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
