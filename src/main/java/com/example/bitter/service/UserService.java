@@ -1,5 +1,6 @@
 package com.example.bitter.service;
 
+import com.example.bitter.domain.MUser;
 import com.example.bitter.domain.MUserRepository;
 import com.example.bitter.domain.RBookUser;
 import com.example.bitter.domain.RBookUserRepository;
@@ -19,4 +20,7 @@ public class UserService {
 
     }
 
+    public List<MUser> getUser(String uid) {
+        return mUserRepository.get(uid);
+    }
 }

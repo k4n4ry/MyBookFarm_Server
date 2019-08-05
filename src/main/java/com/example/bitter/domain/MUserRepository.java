@@ -12,6 +12,9 @@ public interface MUserRepository {
     @Insert("INSERT INTO m_user VALUES(#{uid}, #{uname}, #{description})")
     public void insert(@Param("uid") String uid, @Param("uname") String uname, @Param("description")String description);
 
+    @Select("SELECT * FROM m_user WHERE uid = #{uid}")
+    List<MUser> get(@Param("uid") String uid);
+
 //    @Select("SELECT * FROM r_bookuser WHERE uid = #{uid}")
 //    public List<RBookUser> getBookList(@Param("uid") String uid);
 //

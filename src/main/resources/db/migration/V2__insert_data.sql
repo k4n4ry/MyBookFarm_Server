@@ -2,4 +2,5 @@
 --INSERT INTO currency VALUES (10002, 'Ethereum', 'ETH', 0);
 
 INSERT INTO `springboot-flyway`.m_user VALUES('unoRyxWc8JTQdNtNRfC0VHikuIl2', 'unoRyxWc8JTQdNtNRfC0VHikuIl2', '');
-INSERT INTO `springboot-flyway`.r_bookuser VALUES('unoRyxWc8JTQdNtNRfC0VHikuIl2', '9784062856218', '0', 0, '');
+INSERT INTO `springboot-flyway`.r_bookuser VALUES('unoRyxWc8JTQdNtNRfC0VHikuIl2', '9784062856218', '0', 20, '');
+INSERT INTO `springboot-flyway`.t_user_progress VALUES('unoRyxWc8JTQdNtNRfC0VHikuIl2',cast('2019-08-03 23:58:01' as datetime), '9784062856218', 20)
