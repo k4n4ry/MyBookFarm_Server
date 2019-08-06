@@ -1,6 +1,8 @@
 package com.example.bitter.controller;
 
-import com.example.bitter.domain.RBookUser;
+import com.example.bitter.controller.request.RegistBookRequest;
+import com.example.bitter.controller.response.BookResponse;
+import com.example.bitter.domain.entity.RBookUser;
 import com.example.bitter.service.BookService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

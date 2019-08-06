@@ -1,5 +1,6 @@
 package com.example.bitter.domain;
 
+import com.example.bitter.domain.entity.RBookUser;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 

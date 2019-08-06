@@ -1,6 +1,8 @@
 package com.example.bitter.controller;
 
-import com.example.bitter.domain.Currency;
+import com.example.bitter.controller.request.CurrencyAddRequest;
+import com.example.bitter.controller.response.CurrencyResponse;
+import com.example.bitter.domain.entity.Currency;
 import com.example.bitter.service.CurrencyService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

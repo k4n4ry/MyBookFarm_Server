@@ -1,4 +1,4 @@
-package com.example.bitter.controller;
+package com.example.bitter.controller.request;
 
 import lombok.Getter;
 import lombok.Setter;

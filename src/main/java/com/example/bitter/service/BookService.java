@@ -1,6 +1,6 @@
 package com.example.bitter.service;
 
-import com.example.bitter.domain.RBookUser;
+import com.example.bitter.domain.entity.RBookUser;
 import com.example.bitter.domain.RBookUserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

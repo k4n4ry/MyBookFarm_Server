@@ -1,6 +1,6 @@
 package com.example.bitter.service;
 
-import com.example.bitter.domain.Currency;
+import com.example.bitter.domain.entity.Currency;
 import com.example.bitter.domain.CurrencyRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
-package com.example.bitter.controller;
+package com.example.bitter.controller.response;
 
-import com.example.bitter.domain.RBookUser;
+import com.example.bitter.domain.entity.RBookUser;
 import lombok.Builder;
 import lombok.Getter;
 

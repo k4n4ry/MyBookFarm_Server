@@ -1,4 +1,4 @@
-package com.example.bitter.domain;
+package com.example.bitter.domain.entity;
 
 import lombok.Getter;
 import lombok.Setter;

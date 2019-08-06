@@ -1,6 +1,6 @@
-package com.example.bitter.controller;
+package com.example.bitter.controller.response;
 
-import com.example.bitter.domain.Currency;
+import com.example.bitter.domain.entity.Currency;
 import lombok.Builder;
 import lombok.Getter;
 

@@ -1,9 +1,7 @@
 package com.example.bitter.service;
 
-import com.example.bitter.domain.MUser;
+import com.example.bitter.domain.entity.MUser;
 import com.example.bitter.domain.MUserRepository;
-import com.example.bitter.domain.RBookUser;
-import com.example.bitter.domain.RBookUserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

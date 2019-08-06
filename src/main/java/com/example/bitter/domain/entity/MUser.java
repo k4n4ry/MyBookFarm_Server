@@ -1,16 +1,14 @@
-package com.example.bitter.controller;
+package com.example.bitter.domain.entity;
 
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
 @Setter
-public class RegistUserRequest {
+@Getter
+public class MUser {
 
     private String uid;
-
     private String uname;
-
     private String description;
 
 }

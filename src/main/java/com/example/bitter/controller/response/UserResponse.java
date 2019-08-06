@@ -1,6 +1,6 @@
-package com.example.bitter.controller;
+package com.example.bitter.controller.response;
 
-import com.example.bitter.domain.MUser;
+import com.example.bitter.domain.entity.MUser;
 import lombok.Builder;
 import lombok.Getter;
 
