@@ -20,6 +20,6 @@ public class UserProgressService {
     }
 
     public List<TUserProgress> getUserProgressYYYYMM(String uid, String yyyymm) {
-        return tUserProgressRepository.get(uid, yyyymm);
+        return tUserProgressRepository.get(uid, StringUtil.getThisMonth(yyyymm), StringUtil.getAnyAfterMonth(yyyymm, 1));
     }
 }
