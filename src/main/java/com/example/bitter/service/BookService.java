@@ -26,7 +26,7 @@ public class BookService {
         return rBookUserRepository.getBookListIsbn(uid, isbn);
     }
 
-    public void update(String uid, String isbn, int progress, String memo) {
-        rBookUserRepository.update(uid, isbn, progress, memo);
+    public void update(String uid, String isbn,String status, int progress, String memo) {
+        rBookUserRepository.update(uid, isbn, status, progress, memo);
     }
 }

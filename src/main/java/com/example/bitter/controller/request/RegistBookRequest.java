@@ -11,6 +11,8 @@ public class RegistBookRequest {
 
     private String isbn;
 
+    private String status;
+
     private int progress;
 
     private String memo;
