@@ -17,6 +17,16 @@ public class UserProgressController {
 
     private final UserProgressService userProgressService;
 
+
+    @GetMapping("/user/progress/{uid}")
+    public ResponseEntity<UserProgressResponse> getUserProgress(@PathVariable String uid) {
+        List<TUserProgress> tUserProgressList =  userProgressService.getUserProgress(uid);
+        UserProgressResponse userProgressResponse = UserProgressResponse.builder()
+                .tUserProgressList(tUserProgressList)
+                .build();
+        return new ResponseEntity<>(userProgressResponse, HttpStatus.OK);
+    }
+
     @GetMapping("/user/progress/{uid}/{yyyymm}")
     public ResponseEntity<UserProgressResponse> getUserProgressYYYYMM(@PathVariable String uid, @PathVariable String yyyymm) {
         List<TUserProgress> tUserProgressList =  userProgressService.getUserProgressYYYYMM(uid, yyyymm);

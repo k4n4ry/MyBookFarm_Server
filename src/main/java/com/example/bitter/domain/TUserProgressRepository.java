@@ -16,5 +16,9 @@ public interface TUserProgressRepository {
     public void regist(String uid, String ymd, String kbn, String isbn, int progress);
 
     @Select("SELECT * FROM t_user_progress WHERE uid = #{uid} AND (ymd between #{thisMonth} and #{nextMonth})")
-    List<TUserProgress> get(String uid, String thisMonth, String nextMonth);
+    List<TUserProgress> getUserProgressYYYYMM(String uid, String thisMonth, String nextMonth);
+
+    @Select("SELECT * FROM t_user_progress WHERE uid = #{uid}")
+    List<TUserProgress> getUserProgress(String uid);
+
 }
