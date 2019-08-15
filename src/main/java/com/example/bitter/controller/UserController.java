@@ -23,6 +23,12 @@ public class UserController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    @PutMapping("/user")
+    public ResponseEntity<HttpStatus> putUser(@RequestBody RegistUserRequest request) {
+        userService.put(request.getUid(), request.getUname(), request.getDescription());
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
     @GetMapping("/user/{uid}")
     public ResponseEntity<UserResponse> getUser(@PathVariable String uid) {
         List<MUser> mUserList =  userService.getUser(uid);

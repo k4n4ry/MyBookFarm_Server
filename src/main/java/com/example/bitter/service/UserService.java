@@ -21,4 +21,8 @@ public class UserService {
     public List<MUser> getUser(String uid) {
         return mUserRepository.get(uid);
     }
+
+    public void put(String uid, String uname, String description) {
+        mUserRepository.update(uid, uname, description);
+    }
 }
