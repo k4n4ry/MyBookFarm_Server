@@ -19,6 +19,9 @@ public interface MUserRepository {
     @Update("UPDATE m_user set uname = #{uname}, description = #{description} WHERE uid = #{uid}")
     void update(String uid, String uname, String description);
 
+    @Select("SELECT * FROM m_user WHERE uid in (SELECT uid FROM r_bookuser WHERE isbn = #{isbn})")
+    List<MUser> getOnIsbn(String isbn);
+
 //    @Select("SELECT * FROM r_bookuser WHERE uid = #{uid}")
 //    public List<RBookUser> getBookList(@Param("uid") String uid);
 //

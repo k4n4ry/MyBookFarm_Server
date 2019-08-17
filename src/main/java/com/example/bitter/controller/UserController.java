@@ -38,4 +38,13 @@ public class UserController {
         return new ResponseEntity<>(userResponse, HttpStatus.OK);
     }
 
+    @GetMapping("/user/search")
+    public ResponseEntity<UserResponse> getUserOnIsbn(@RequestParam("isbn") String isbn) {
+        List<MUser> mUserList =  userService.getUserOnIsbn(isbn);
+        UserResponse userResponse = UserResponse.builder()
+                .mUserList(mUserList)
+                .build();
+        return new ResponseEntity<>(userResponse, HttpStatus.OK);
+    }
+
 }

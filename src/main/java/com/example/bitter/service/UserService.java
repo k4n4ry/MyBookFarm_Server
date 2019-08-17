@@ -25,4 +25,8 @@ public class UserService {
     public void put(String uid, String uname, String description) {
         mUserRepository.update(uid, uname, description);
     }
+
+    public List<MUser> getUserOnIsbn(String isbn) {
+        return mUserRepository.getOnIsbn(isbn);
+    }
 }
