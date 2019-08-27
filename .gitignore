@@ -33,3 +33,4 @@ out/
 
 ### add from knry ###
 application.yml
+.DS_Store

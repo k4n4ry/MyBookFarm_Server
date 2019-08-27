@@ -9,7 +9,8 @@ CREATE TABLE bitterdb.m_user (
   uname VARCHAR(256),
   description VARCHAR(2000),
   PRIMARY KEY (uid)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+ROW_FORMAT=DYNAMIC;
 
 CREATE TABLE bitterdb.r_bookuser (
   uid VARCHAR(256) NOT NULL,
@@ -22,7 +23,8 @@ CREATE TABLE bitterdb.r_bookuser (
   FOREIGN KEY (uid)
   REFERENCES bitterdb.m_user (uid)
   ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+ROW_FORMAT=DYNAMIC;
 
 CREATE TABLE bitterdb.t_user_progress (
   uid VARCHAR(256) NOT NULL,
@@ -37,6 +39,7 @@ CREATE TABLE bitterdb.t_user_progress (
 --  CONSTRAINT fk_isbn
 --    FOREIGN KEY (isbn) REFERENCES bitterdb.r_bookuser(isbn)
 --    ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+ROW_FORMAT=DYNAMIC;
 
 
