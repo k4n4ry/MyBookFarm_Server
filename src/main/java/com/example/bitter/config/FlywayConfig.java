@@ -10,10 +10,10 @@ public class FlywayConfig {
     @Bean
     public FlywayMigrationStrategy strategy() {
         return flyway -> {
-            // flyway_schema_historyの初期化
-            flyway.clean();
-            // マイグレーション実行
-            flyway.migrate();
+//            // flyway_schema_historyの初期化
+//            flyway.clean();
+//            // マイグレーション実行
+//            flyway.migrate();
         };
     }
 }
